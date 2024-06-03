@@ -1,4 +1,2 @@
-psycopg2
-psycopg2
 selenium
-datetime
+psycopg2
