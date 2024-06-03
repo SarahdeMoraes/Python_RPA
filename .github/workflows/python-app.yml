@@ -23,7 +23,13 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    
+
+    - name: Run app
+      run: |
+         coverage run RPACotacao.py
+         
+    - name: Tests report
+      run: coverage report -m
               
     - name: Publicando no Docker 
       uses: mr-smithers-excellent/docker-build-push@v6.4
